@@ -3,6 +3,7 @@ import { LuHome } from "react-icons/lu";
 import { LuInfo } from "react-icons/lu";
 import Link from "next/link";
 import Menu from "./Menu";
+import LightModeSwitch from "./LightModeSwitch";
 
 const Header = () => {
   return (
@@ -11,7 +12,8 @@ const Header = () => {
         <Menu title={"HOME"} adress={"/"} Icon={LuHome} />
         <Menu title={"About"} adress={"/about"} Icon={LuInfo} />
       </div>
-      <div className="">
+      <div className="flex items-center space-x-5">
+        <LightModeSwitch />
         <Link href={"/"}>
           <h2 className="text-2xl">
             <span className="font-bold bg-emerald-600 rounded-lg py-2 px-1 mr-1">
